@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" fx:controller="application.BigMama" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="533.0" prefWidth="627.0" rotate="0.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+  <children>
+    <Button layoutX="190.0" layoutY="498.0" mnemonicParsing="false" onAction="#generate" text="Generiere" />
+    <Button layoutX="311.0" layoutY="498.0" mnemonicParsing="false" onAction="#beenden" text="Abbrechen" />
+    <CheckBox layoutX="40.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleVorname" text="Vorname" />
+    <CheckBox layoutX="40.0" layoutY="81.0" mnemonicParsing="false" onAction="#handleNachname" text="Nachname" />
+    <CheckBox layoutX="40.0" layoutY="108.0" mnemonicParsing="false" onAction="#handleIban" text="Iban" />
+    <CheckBox layoutX="40.0" layoutY="33.0" mnemonicParsing="false" onAction="#handleId" prefWidth="37.9998779296875" text="id" />
+    <CheckBox layoutX="40.0" layoutY="137.0" mnemonicParsing="false" onAction="#handleLandcode" text="Landcode" />
+    <CheckBox layoutX="42.0" layoutY="166.0" mnemonicParsing="false" onAction="#handleLand" text="Land" />
+    <TextField fx:id="delimiter" layoutX="302.0" layoutY="377.0" onKeyTyped="#delimiterKeyTyped" prefWidth="85.0" promptText="Delimiter" text="," />
+    <CheckBox layoutX="40.0" layoutY="192.0" mnemonicParsing="false" onAction="#handleAbreisedatum" text="Abreisedatum" />
+    <CheckBox layoutX="42.0" layoutY="220.0" mnemonicParsing="false" onAction="#handleRückreisedatum" text="Rückreisedatum" />
+    <CheckBox layoutX="42.0" layoutY="248.0" mnemonicParsing="false" onAction="#handleUrlaubstage" text="Urlaubstage" />
+    <CheckBox layoutX="42.0" layoutY="274.0" mnemonicParsing="false" onAction="#handleStorno" text="storno" />
+    <CheckBox layoutX="40.0" layoutY="303.0" mnemonicParsing="false" onAction="#handleBewertung" prefWidth="149.0" text="bewertung 1-5" />
+    <CheckBox layoutX="42.0" layoutY="434.0" mnemonicParsing="false" onAction="#handleKundennr" text="Kundennr" />
+    <CheckBox layoutX="40.0" layoutY="406.0" mnemonicParsing="false" onAction="#handleGeburtsdatum" text="Geburtsdatum" />
+    <CheckBox layoutX="40.0" layoutY="380.0" mnemonicParsing="false" onAction="#handleKartentyp" text="Kartentyp" />
+    <CheckBox layoutX="40.0" layoutY="353.0" mnemonicParsing="false" onAction="#handleHandyNr" text="Handynr" />
+    <CheckBox layoutX="42.0" layoutY="330.0" mnemonicParsing="false" onAction="#handleEmail" prefWidth="62.9998779296875" text="Email" />
+    <Label layoutX="169.0" layoutY="4.0" prefHeight="29.0" prefWidth="329.0" text="DatenGenerator Visee" textFill="#5200ff" underline="true">
+      <font>
+        <Font name="System Bold" size="23.0" />
+      </font>
+    </Label>
+    <TextField id="anzahlFeld" fx:id="anzahlFeldAwesome" layoutX="302.0" layoutY="355.0" onKeyPressed="#anzahlKeyPressed" onKeyTyped="#anzahlKeyTyped" prefWidth="85.0" promptText="Anzahl" text="" />
+    <Label layoutX="173.0" layoutY="383.0" text="Delimiter" />
+    <Label layoutX="173.0" layoutY="363.0" text="Anzahl" />
+    <Separator layoutX="171.0" layoutY="351.0" prefWidth="392.0" />
+    <Separator layoutX="165.0" layoutY="351.0" orientation="VERTICAL" prefHeight="83.0" />
+    <TextArea fx:id="textArea" editable="false" layoutX="169.0" layoutY="48.0" prefHeight="282.0" prefWidth="408.0" wrapText="true" />
+    <Separator layoutX="169.0" layoutY="430.0" prefWidth="398.0" />
+    <Separator layoutX="563.0" layoutY="351.0" orientation="VERTICAL" prefHeight="83.0" />
+    <Label fx:id="labelID" layoutX="12.0" layoutY="33.0" prefHeight="16.0" prefWidth="28.0" text="0" />
+    <Label fx:id="labelVorname" layoutX="12.0" layoutY="56.0" prefHeight="16.0" prefWidth="28.0" text="0" />
+    <Label fx:id="labelNachname" layoutX="12.0" layoutY="81.0" prefHeight="16.0" prefWidth="28.0" text="0" />
+    <Label id="LabelIban" fx:id="labelIban" layoutX="12.0" layoutY="108.0" prefHeight="16.0" prefWidth="28.0" text="0" />
+    <Label fx:id="labelLandcode" layoutX="12.0" layoutY="137.0" prefHeight="16.0" prefWidth="28.0" text="0" />
+    <Label fx:id="labelLand" layoutX="14.0" layoutY="166.0" prefHeight="16.0" prefWidth="28.0" text="0" />
+    <Label fx:id="labelAbreisedatum" layoutX="12.0" layoutY="192.0"  prefHeight="16.0" prefWidth="28.0" text="0" />
+    <Label fx:id="labelRückreisedatum" layoutX="12.0" layoutY="220.0" prefHeight="16.0" prefWidth="28.0" text="0" />
+    <Label fx:id="labelUrlaubstage" layoutX="14.0" layoutY="248.0" prefHeight="16.0" prefWidth="28.0" text="0" />
+    <Label fx:id="labelStorno" layoutX="14.0" layoutY="274.0" prefHeight="16.0" prefWidth="28.0" text="0" />
+    <Label fx:id="labelBewertungen" layoutX="12.0" layoutY="303.0" prefHeight="16.0" prefWidth="28.0" text="0" />
+    <Label fx:id="labelEmail" layoutX="12.0" layoutY="330.0" prefHeight="16.0" prefWidth="28.0" text="0" />
+    <Label fx:id="labelHandyNr" layoutX="12.0" layoutY="355.0" prefHeight="16.0" prefWidth="28.0" text="0" />
+    <Label fx:id="labelKartentyp" layoutX="12.0" layoutY="379.0" prefHeight="16.0" prefWidth="28.0" text="0" />
+    <Label fx:id="labelGeburtsdatum" layoutX="12.0" layoutY="406.0" prefHeight="16.0" prefWidth="28.0" text="0" />
+    <Label fx:id="labelKundennr" layoutX="12.0" layoutY="434.0" prefHeight="16.0" prefWidth="28.0" text="0" />
+    <Label layoutX="177.0" layoutY="32.0" text="Beispielausgabe" underline="true" />
+  </children>
+</AnchorPane>
